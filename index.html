@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>月经周期助手 - 健康记录与科普</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,6 +27,49 @@
         <section class="intro-section">
             <h2>关爱女性健康</h2>
             <p>记录经期，了解周期，守护健康</p>
+        </section>
+
+        <!-- 动态发布区 -->
+        <section class="community-section card">
+            <h3>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+                </svg>
+                姐妹社区
+            </h3>
+            <div class="demo-tip">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="16" x2="12" y2="12"/>
+                    <line x1="12" y1="8" x2="12.01" y2="8"/>
+                </svg>
+                本地演示模式 - 数据存储在浏览器中
+            </div>
+            <div class="post-create">
+                <textarea id="postContent" placeholder="分享你的经期小经验、健康心得或疑问..."></textarea>
+                <button class="btn btn-primary" id="postBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                    发布
+                </button>
+            </div>
+        </section>
+
+        <!-- 动态列表 -->
+        <section class="posts-section" id="postsSection">
+            <div class="loading" id="loadingPosts">
+                <div class="spinner"></div>
+                <span>加载中...</span>
+            </div>
+            <div class="posts-list" id="postsList"></div>
+            <div class="empty-posts" id="emptyPosts" style="display: none;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                <p>还没有动态，快来发布第一条吧！</p>
+            </div>
         </section>
 
         <section class="input-section card">
@@ -303,6 +346,6 @@
         <p>如有健康问题，请咨询专业医生</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
